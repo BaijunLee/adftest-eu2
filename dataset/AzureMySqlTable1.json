@@ -1,0 +1,46 @@
+{
+	"name": "AzureMySqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureMySql1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureMySqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Name",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Age",
+				"type": "int",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "vendor_group",
+				"type": "int",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "vendor_group2",
+				"type": "int",
+				"precision": 0,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"tableName": "persons"
+		}
+	}
+}
