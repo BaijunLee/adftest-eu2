@@ -17,6 +17,94 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/testpython')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Set variable1",
+						"type": "SetVariable",
+						"dependsOn": [],
+						"policy": {
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"variableName": "testvaa",
+							"value": {
+								"value": "@pipeline().parameters.testseta",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"testseta": {
+						"type": "string",
+						"defaultValue": "\"aaa\""
+					}
+				},
+				"variables": {
+					"testvaa": {
+						"type": "String",
+						"defaultValue": "\"abc\""
+					}
+				},
+				"annotations": [],
+				"lastPublishTime": "2025-01-16T05:11:31Z"
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/testpython_copy1')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Set variable1",
+						"type": "SetVariable",
+						"dependsOn": [],
+						"policy": {
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"variableName": "testvaa",
+							"value": {
+								"value": "@pipeline().parameters.testseta",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"testseta": {
+						"type": "string",
+						"defaultValue": "\"aaa\""
+					}
+				},
+				"variables": {
+					"testvaa": {
+						"type": "String",
+						"defaultValue": "\"abc\""
+					}
+				},
+				"annotations": [],
+				"lastPublishTime": "2025-01-16T05:11:31Z"
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/AzureMySql1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
